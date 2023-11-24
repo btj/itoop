@@ -126,4 +126,4 @@ def all_elements(self):
     return tuple(self._buffer[(self._start + i) % len(self._buffer)] for i in range(self._length))
 ```
 
-The time required by your `insert_at_index` and `remove_at_index` methods shall be independent of the length, provided that the index is at a fixed distance from the start or end and that the buffer has free space. If the buffer is full, double its size.
+The time required by your `insert_at_index` and `remove_at_index` methods shall be independent of the length, provided that the index is at a fixed distance from the start or end and that (in the case of `insert_at_index`) the buffer has free space. In the case of `insert_at_index`, if the buffer is full, double its size.
