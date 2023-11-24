@@ -117,6 +117,8 @@ Notice that you can easily traverse a doubly linked list forwards, but also back
 
 This way, make sure the time taken by your implementation's `element_at_index`, `insert_at_index`, and `remove_at_index` methods is independent of the length L given a fixed index I or given an index of the form L - K with K fixed (i.e. at a fixed distance from the start or end).
 
+Hint: implement a private helper method `_node_at_index` that returns the node at a given index, and then use this method to implement `element_at_index`, `insert_at_index`, and `remove_at_index`.
+
 ## Implementation 4: using a ring buffer
 
 In this implementation, your class shall use an attribute `_buffer` that refers to a `list` object, an attribute `_start` that stores an `int` value not less than zero but less than the length of `_buffer`, and an attribute `_length` that stores an `int` value not less than zero and not greater than the length of `_buffer`. Initially, `_buffer` shall be a `list` object of length 10 whose elements are all `None`, and `_start` and `_length` are both 0. The implementation of method `all_elements` shall be as follows:
